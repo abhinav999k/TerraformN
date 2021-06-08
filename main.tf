@@ -13,6 +13,10 @@ resource "azurerm_resource_group" "azure_rg" {
   location =  var.location
 }
 
+module "vnet" {
+  source = "./module"
+}
+
 
 provider "azurerm" {
   features {}
